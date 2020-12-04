@@ -1,0 +1,484 @@
+body{
+  overflow: hidden;
+}
+
+.App{
+  background-color:black;
+  height: 100vh; 
+  width: 100vw;
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+} 
+ 
+
+.AboutMeFotos{
+  height: 100vh;
+  width: 100vw;
+}
+
+.container{
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  right: 25%;
+
+  position: fixed;
+  background-color: white;
+  border-radius: 52px;
+  overflow: hidden;
+}
+
+.circle{
+  background: white;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.circle.active{
+  background: white;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+
+
+  animation: circle 1.8s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1.8s;
+
+}
+
+
+.container.active{
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: 10%;
+  right: 25%;
+
+  position: fixed;
+  background-color: white;
+  border-radius: 52px;
+  overflow: hidden;
+}
+
+ 
+.tori{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  /* animation: breathing 4s ease-out infinite normal; */
+  transition: 1.8s;
+  animation: sizedown 1.8s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1.8s;
+}
+
+
+.tori.active{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  right: 0%; 
+  transform: translate(50%,-50%);
+  animation: sizeup 1.8s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1.8s;
+}
+
+
+.tori.scrolled{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  right: 50%; 
+  transform: translate(50%,-50%);
+  animation: sizeup 1.8s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1.8s;
+}
+
+.text{
+  display: none;
+  
+}
+
+.text.active{
+  display: block;
+}
+
+.tori:hover{
+  opacity: 0.8; 
+  cursor: pointer;
+}
+
+.name{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 108px;
+  color: #202020;
+  text-transform: uppercase;
+  font-weight: 900; /* black */
+  margin-bottom: -20px;
+
+  animation: opacity 0.3s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s;
+
+  text-shadow: 2px 8px 6px rgba(32,32,32,0.1),
+  0px -5px 35px rgba(255,255,255,0.1); 
+}
+ 
+.lastName{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 108px;
+  color: #4100FF;
+  text-transform: uppercase;
+  font-weight: 900; /* black */
+
+  
+  animation: opacity 0.7s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s;
+
+  text-shadow: 2px 8px 6px rgba(32,32,32,0.1),
+                 0px -5px 35px rgba(255,255,255,0.1); 
+}
+
+.description{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #202020;
+  margin-top: 20px;  
+  font-weight: 600; /* black */
+
+  
+  animation: opacity 1.2s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+ 
+  text-shadow: 2px 8px 6px rgba(32,32,32,0.1),
+                 0px -5px 35px rgba(255,255,255,0.1); 
+}
+
+.texts{
+  position: absolute;
+  top: 22%;
+  left: 20%;
+}
+
+.texts.active{
+  position: absolute;
+  top: 22%;
+  left: 20%;
+  animation: dissapear 1.2s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+}
+
+
+.menu{
+  position: absolute; 
+  width: 50px;
+  top: 48%;
+  left: 4%;
+
+  animation: opacity 2.6s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 2s;
+} 
+
+.close{
+  position: absolute; 
+  width: 50px;
+  top: 48%;
+  left: 8%;
+
+  animation: opacity 1.0s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1s;
+}
+
+.close:hover{
+  opacity: 0.2;
+  cursor: pointer;
+  } 
+  
+
+
+.nav{
+  z-index: 999;
+  display: none;
+  z-index: 999;
+}
+
+ul{
+  z-index: 20;
+  text-align: center;
+  position: absolute;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%,-50%);
+ left: -12%;
+
+  animation: opacity 1.0s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 1s;
+  
+}
+
+li{
+  z-index: 20;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900; /* black */
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+
+li:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+  cursor: pointer;
+
+}
+
+.nav.active{
+  z-index: 9999;
+  display: block;
+  background-color: #4100FF;
+  width: 515px;
+  height: 90%;
+  top: 5%;
+  bottom: 5%;
+  left: 8%;
+  right: 25%;
+  position: fixed;
+  border-radius: 52px;
+
+  animation: bigger 0.4s ease;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+.menu:hover{
+  z-index: 20;
+
+opacity: 0.2;
+cursor: pointer;
+} 
+
+#mouse{
+  position: absolute;
+  width: 50px;
+  bottom: 5%;
+  left: 48%;
+
+  animation: opacity 2.6s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 2s;
+}
+
+#mouse #Path_7 {
+	animation: scroll ease 1.5s infinite;
+}
+
+
+
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(100px);
+	}
+}
+
+@-webkit-keyframes breathing {
+  0% { 
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+
+@keyframes sizeup { 
+  0% {
+  width: 300px;
+  }
+
+  100% {
+    width: 500px;
+  }
+}
+
+@keyframes sizedown { 
+  0% {
+    width: 500px;
+    
+    }
+
+    100% {
+      width: 300px;
+    }
+}
+
+@keyframes bigger { 
+  0% {
+  transform: scale(0);
+  z-index: 9999;
+  }
+
+/* 80%{
+transform: scale(1.0);
+z-index: 9999;
+} */
+  
+  100% {
+   transform: scale(1);
+   z-index: 9999;
+  }
+}
+
+
+@keyframes opacity { 
+  0% {
+  opacity: 0;
+  }
+
+  50%{
+    opacity: 0;
+  }
+  
+  100% {
+   opacity: 1;
+  }
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(100px);
+	}
+}
+
+
+@keyframes circle { 
+  0% {
+  width: 300px;
+  height: 300px;
+  }
+
+  60%{
+    width: 2000px;
+    height: 2000px;
+  }
+
+  100% {
+    width: 5000px;
+    height: 4000px;
+  }
+}
+
+@keyframes dissapear{
+  0% {
+    opacity: 1;
+    display: block;
+    }
+  
+    80%{
+      opacity: 1;
+      display: block;
+    }
+
+    100% {
+     opacity: 0;
+     display: none;
+    }
+}

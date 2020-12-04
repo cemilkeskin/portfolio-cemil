@@ -1,0 +1,262 @@
+.About{
+    background-color:white;
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }   
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .toriAbout{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    /* animation: breathing 4s ease-out infinite normal; */
+
+    animation: dissapear 1s ease-out;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    transition: 0s;
+  }
+
+  .images{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 38%;
+    transform: translate(50%,-50%);
+  }
+
+  .cemilImg{
+      width: 25%;
+      animation: opacity 3.0s ease;
+      animation-timing-function:linear;
+      animation-fill-mode:forwards;
+      -webkit-animation-fill-mode: forwards;
+      transition: 1s;
+  }
+
+
+  .images.active{
+    animation: dissapear 1.3s ease-in-out;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.container2{
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  right: 25%;
+ 
+  position: fixed;
+  background-color: white;
+  border-radius: 52px;
+
+}
+
+  .cemilImg2{
+    width: 25%;
+    animation: opacity 3.5s ease-out;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards; 
+    -webkit-animation-fill-mode: forwards;
+    transition: 1s;
+}
+
+
+.cemilImg3{
+    width: 25%;
+    animation: opacity 4s ease-out; 
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    transition: 1s;
+}
+
+.descriptioncont{
+  animation: showslow 7.8s ease;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+}
+
+.about{
+  position: absolute;
+  top: 35%;
+  left: 16%;
+  width: 100%;
+  animation: showslow 6.8s ease-in-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+}
+
+.about.active{ 
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  width: 100%;
+  animation: dissapear 1.2s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+}
+
+  .menuBig{
+    position: absolute; 
+    width: 50px;
+    top: 48%;
+    left: 0%;
+  
+    animation: opacity 2.6s ease-out;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    transition: 2s;
+  } 
+  
+  .closeBig{
+    position: absolute; 
+    width: 50px;
+    top: 48%;
+    left: 8%;
+  
+    animation: opacity 2.6s ease-out;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    transition: 2s;
+  }
+  
+  .closeBig:hover{
+    opacity: 0.2;
+    cursor: pointer;
+    } 
+    
+
+    .menuBig:hover{
+        z-index: 20;
+      
+      opacity: 0.2;
+      cursor: pointer;
+      } 
+      
+      #mouseBig{
+        position: absolute;
+        width: 50px;
+        bottom: 0%;
+        left: 48%;
+      
+        animation: opacity 2.6s ease-out;
+        animation-timing-function:linear;
+        animation-fill-mode:forwards;
+        -webkit-animation-fill-mode: forwards;
+        transition: 2s;
+      }
+      
+      #mouseBig #Path_7 {
+          animation: scroll ease 1.5s infinite;
+      }
+
+      .nav2{
+        z-index: 999;
+        display: none;
+        z-index: 999;
+      }
+
+      .nav2.active{
+        z-index: 9999;
+        display: block;
+        background-color: #4100FF;
+        width: 515px;
+        height: 90%;
+        top: 5%;
+        bottom: 5%;
+        left: 3%;
+        right: 25%;
+        position: fixed;
+        border-radius: 52px;
+      
+        animation: bigger 0.4s ease;
+        animation-timing-function:linear;
+        animation-fill-mode:forwards;
+        -webkit-animation-fill-mode: forwards;
+        transition: 0.4s;
+        z-index: 9999;
+      }
+  
+.description2{
+  font-family: 'Montserrat', sans-serif;
+  width:50%;
+  min-width:1px;
+  font-size: 20px;
+  color: #202020;
+  margin-top: 30px;  
+  font-weight: 600; /* black */
+
+  animation: opacity 1.2s ease-out;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  transition: 0s; 
+ 
+  text-shadow: 2px 8px 6px rgba(32,32,32,0.1),
+                 0px -5px 35px rgba(255,255,255,0.1); 
+}
+
+      @keyframes opacity { 
+        0% {
+        opacity: 0;
+        }
+      
+        50%{
+          opacity: 0;
+        }
+        
+        100% {
+         opacity: 1;
+  
+        }
+      }
+
+
+      
+      @keyframes showslow { 
+        0% {
+        opacity: 0;
+        top: 35%;
+        left: 16%;
+        }
+      
+        80%{
+          opacity: 0;
+          top: 35%;
+          left: 16%;
+        }
+        
+        90% {
+         opacity: 0;
+         top: 35%;
+         left: 16%;
+        }
+
+        100%{
+          opacity: 1;
+          top: 20%;
+          left: 16%;
+        }
+      }
